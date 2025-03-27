@@ -1,14 +1,17 @@
-//style
-import './style/about.sass';
+// style
+import './about.sass';
 
-//icon
+// icon
 import { MdArrowOutward, IoMdDownload } from '../../assets/icon/index';
 
-//hook
+// hook
 import { useTranslation } from 'react-i18next';
 
-//component
-import { DefaultPages, Title, Button, TextInfo } from '../../components/index';
+// component
+import DefaultPages from '../../components/common/defaultPages/defaultPages';
+import Title from '../../components/common/title/title';
+import Button from '../../components/common/button/button';
+import TextInfo from '../../components/common/textInfo/textInfo';
 
 const AboutPage = () => {
 
@@ -19,26 +22,26 @@ const AboutPage = () => {
 
             <section className='about'>
 
-                <Title title={t('about.headerTitle')} />
+                <Title title={t('hi')} />
                 <TextInfo
-                    title={t('about.headerDescription')}
-                    description={t('about.textInfo')}
+                    title={t('mySelf')}
+                    description={t('myEnglishName...')}
                 />
 
                 <div className="about__buttonItems">
 
                     <a href='mailto:glem920813@gmail.com'>
                         <Button
-                            name={t('about.buttonItems.0')}
+                            name={t('contactMe')}
                             icon={<MdArrowOutward />}
-                            btnClassName='about__btnEmail'
+                            className='about__btnEmail'
                         />
                     </a>
 
                     <Button
-                        name={t('about.buttonItems.1')}
+                        name={t('downloadCV')}
                         icon={<IoMdDownload />}
-                        btnClassName='about__btnDownload'
+                        className='about__btnDownload'
                         disabled
                     />
 

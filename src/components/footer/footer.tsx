@@ -1,10 +1,8 @@
-//style
+// style
 import './footer.sass';
 
-export interface footerProps {
-    copyright: string
-    version: string
-}
+// type
+import { footerProps } from './footer.type';
 
 const Footer: React.FC<footerProps> = (props) => {
 
@@ -18,7 +16,7 @@ const Footer: React.FC<footerProps> = (props) => {
 
             <p className='footer__copyright'>{copyright}</p>
             <p className='footer__version'>{version}</p>
-            
+
         </footer>
     );
 };

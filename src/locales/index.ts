@@ -3,5 +3,5 @@ import zhTWTranslation from './zh-TW/translation.json';
 
 export {
     enTranslation as en,
-    zhTWTranslation as zh_TW
+    zhTWTranslation as zhTW
 }

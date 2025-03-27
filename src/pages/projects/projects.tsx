@@ -1,14 +1,16 @@
-//style
-import './style/project.sass';
+// style
+import './project.sass';
 
-//hook
+// hook
 import { useTranslation } from 'react-i18next';
 
-//content
-import { projectContent } from "../../data/index";
+// data
+import projectContent from '../../data/project';
 
-//component
-import { DefaultPages, Title, ProjectCard } from "../../components/index";
+// component
+import DefaultPages from '../../components/common/defaultPages/defaultPages';
+import Title from '../../components/common/title/title';
+import ProjectCard from '../../components/common/projectCard/projectCard';
 
 const ProjectsPage = () => {
 
@@ -19,7 +21,7 @@ const ProjectsPage = () => {
 
             <>
                 <section>
-                    <Title title={t('project.title')} />
+                    <Title title={t('projects')} />
                 </section>
 
 

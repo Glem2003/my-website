@@ -1,23 +1,29 @@
-//style
-import './style/resume.sass'
+// style
+import './resume.sass'
 
-//hook
+// hook
 import { useTranslation } from 'react-i18next';
 import useActive from '../../hook/useActive';
 
-//component
-import { DefaultPages, Title, List, ExperienceCard, ToolsOfChoice, Education, Hobbies } from '../../components/index';
+// component
+import DefaultPages from '../../components/common/defaultPages/defaultPages';
+import Title from '../../components/common/title/title';
+import List from '../../components/resume/list/list';
+import ExperienceCard from '../../components/resume/experience/experience';
+import ToolsOfChoice from '../../components/resume/toolsOfChoice/toolsOfChoice';
+import Education from '../../components/resume/education/education';
+import Hobbies from '../../components/resume/hobbies/hobbies';
+
+// data
+import { lists } from '../../data/resume/lists';
+import { experience } from '../../data/resume/experience';
+import { toolsOfChoice } from '../../data/resume/toolsOfChoice';
+import { education } from '../../data/resume/education';
+import { hobbies } from '../../data/resume/hobbies';
 
 const ResumePage = () => {
 
     const { t } = useTranslation()
-
-    // Take content
-    const list: any[] = t('resume.list', { returnObjects: true }) as any[];
-    const experience: any[] = t('resume.experience', { returnObjects: true }) as any[];
-    const toolsInfo: any[] = t('resume.toolsOfChoice', { returnObjects: true }) as any[];
-    const education: any[] = t('resume.education', { returnObjects: true }) as any[];
-    const hobbies: any[] = t('resume.hobbies', { returnObjects: true }) as any[];
 
     const { active, handleClick } = useActive()
 
@@ -27,16 +33,16 @@ const ResumePage = () => {
             <div className="resume">
 
                 <section className="resume__head">
-                    <Title title={t('resume.webTitle')} />
+                    <Title title={t('resume')} />
                 </section>
 
                 <div className="resume__slide">
                     <ul>
-                        {list.map((item) => (
+                        {lists.map((item) => (
                             <List
-                                {...item}
-                                listClass={active === item.key ? 'list--active' : ''}
-                                listHandle={() => handleClick(item.key)}
+                                listText={t(item.text)}
+                                listClass={active === item.text ? 'list--active' : ''}
+                                listHandle={() => handleClick(item.text)}
                             />
                         ))}
                     </ul>
@@ -44,31 +50,55 @@ const ResumePage = () => {
 
                 <main className="resume__main">
 
-                    {active === 'experience' && experience.map((item, index) => (
+                    {active === 'experience' && experience.map(({
+                        firstDate,
+                        lastDate,
+                        title,
+                        content
+                    }, index) => (
                         <ExperienceCard
                             key={index}
-                            {...item}
+                            firstDate={firstDate}
+                            lastDate={lastDate}
+                            title={t(title)}
+                            content={content}
                         />
                     ))}
 
-                    {active === 'toolsOfChoice' && toolsInfo.map((item, index) => (
+                    {active === 'toolsOfChoice' && toolsOfChoice.map(({
+                        subtitle,
+                        title
+                    }, index) => (
                         <ToolsOfChoice
                             key={index}
-                            {...item}
+                            subtitle={t(subtitle)}
+                            title={title}
                         />
                     ))}
 
-                    {active === 'education' && education.map((item, index) => (
+                    {active === 'education' && education.map(({
+                        firstDate,
+                        lastDate,
+                        title,
+                        content
+                    }, index) => (
                         <Education
                             key={index}
-                            {...item}
+                            firstDate={firstDate}
+                            lastDate={lastDate}
+                            title={t(title)}
+                            content={t(content)}
                         />
                     ))}
 
-                    {active === 'hobbies' && hobbies.map((item, index) => (
+                    {active === 'hobbies' && hobbies.map(({
+                        subtitle,
+                        title
+                    }, index) => (
                         <Hobbies
                             key={index}
-                            {...item}
+                            subtitle={t(subtitle)}
+                            title={t(title)}
                         />
                     ))}
 

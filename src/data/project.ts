@@ -1,5 +1,10 @@
 //images
-import { EC, TaskManger } from '../assets/images/index';
+import {
+    EC,
+    TaskManger,
+    BlogPlatform,
+    SpotifyDemo
+} from '../assets/images/index';
 
 const projectContent = [
     {
@@ -17,6 +22,22 @@ const projectContent = [
         projectName: 'Task Management',
         firstData: '2024/07',
         lastData: '2024/08',
+    },
+    {
+        image: BlogPlatform,
+        imagesName: 'Blog Platform',
+        projectLink: 'https://github.com/Glem2003/blog-demo',
+        projectName: 'Blog Platform',
+        firstData: '2024/12',
+        lastData: '2025/01',
+    },
+    {
+        image: SpotifyDemo,
+        imagesName: 'Spotify Demo',
+        projectLink: 'https://github.com/Glem2003/Spotify-Demo',
+        projectName: 'Spotify Demo',
+        firstData: '2025/03',
+        lastData: '2025/03',
     }
 ]
 
