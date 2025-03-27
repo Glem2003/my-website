@@ -1,153 +1,40 @@
 {
-    "footer": {
-        "copyright": "版權所有 © Glem 2025. 保留所有權利。",
-        "version": "版本 0.8.9"
-    },
-    "header": {
-        "list": [
-            "關於我",
-            "履歷",
-            "專案"
-        ]
-    },
-    "about": {
-        "headerTitle": "你好!",
-        "headerDescription": "我叫江家瑞，我住在台灣",
-        "textInfo": "我的英文名字是 Glem，我是一名前端網頁開發者，主要使用 React 架設網站。作為初學者，我致力於優化用戶界面和用戶體驗。我擁有扎實的技術基礎，並在每個專案中追求卓越。",
-        "buttonItems": [
-            "聯絡我",
-            "下載履歷"
-        ]
-    },
-    "resume": {
-        "webTitle": "履歷",
-        "list": [
-            {
-                "key": "experience",
-                "listText": "經歷"
-            },
-            {
-                "key": "education",
-                "listText": "學歷"
-            },
-            {
-                "key": "toolsOfChoice",
-                "listText": "使用工具"
-            },
-            {
-                "key": "hobbies",
-                "listText": "興趣"
-            }
-        ],
-        "experience": [
-            {
-                "firstDate": "2022/03",
-                "title": "電子商務人員",
-                "content": [
-                    "完成挑選、打包和出貨流程。",
-                    "處理客戶服務表單和逆向物流。"
-                ]
-            },
-            {
-                "firstDate": "2021/09",
-                "lastDate": "2022/01",
-                "title": "學校行政工讀生",
-                "content": [
-                    "協助學生處理課程相關問題。",
-                    "協助整理辦公室。",
-                    "協助辦公室相關工作。",
-                    "接聽和管理電話。"
-                ]
-            },
-            {
-                "firstDate": "2021/01",
-                "lastDate": "2021/02",
-                "title": "寒假工讀生",
-                "content": [
-                    "接收和檢查物流商品，進行庫存盤點。",
-                    "參與物流商品重整和包裝。",
-                    "維持和清潔工作區域。",
-                    "處理商品存儲、配送排程和出貨任務。",
-                    "管理零售庫存控制。"
-                ]
-            }
-        ],
-        "toolsOfChoice": [
-            {
-                "subtitle": "開發",
-                "title": "HTML"
-            },
-            {
-                "subtitle": "開發",
-                "title": "CSS"
-            },
-            {
-                "subtitle": "開發",
-                "title": "SASS"
-            },
-            {
-                "subtitle": "開發",
-                "title": "JavaScript"
-            },
-            {
-                "subtitle": "開發",
-                "title": "TypeScript"
-            },
-            {
-                "subtitle": "開發",
-                "title": "React"
-            }
-        ],
-        "education": [
-            {
-                "firstDate": "2021/09",
-                "title": "健行科技大學",
-                "content": "資訊管理系"
-            },
-            {
-                "firstDate": "2018/09",
-                "lastDate": "2021/06",
-                "title": "私立仰德高中",
-                "content": "電子商務科"
-            }
-        ],
-        "hobbies": [
-            {
-                "subtitle": "興趣",
-                "title": "寫程式"
-            },
-            {
-                "subtitle": "興趣",
-                "title": "閱讀書籍"
-            },
-            {
-                "subtitle": "興趣",
-                "title": "看電影"
-            },
-            {
-                "subtitle": "興趣",
-                "title": "玩遊戲"
-            },
-            {
-                "subtitle": "興趣",
-                "title": "旅行"
-            }
-        ]
-    },
-    "project": {
-        "title": "專案"
-    },
-    "admin": {
-        "logo": "後台系統",
-        "version": "0.1",
-        "list": [
-            "儀表板",
-            "內容管理系統",
-            "權限",
-            "網站設定",
-            "設定",
-            "登出"
-        ],
-        "welcomeMessage": "歡迎使用後台管理系統。"
-    }
+    "about": "關於",
+    "answeredAndManagedPhoneCalls": "接聽並處理電話來電。",
+    "assistedStudents...": "協助學生解決課程相關問題。",
+    "assistedWithOfficeRelatedTasks": "協助辦公室相關工作。",
+    "chienHsinUniversityOfScienceAndTechnology": "健行科技大學",
+    "coding": "編程",
+    "completedTheSelection...": "完成選擇、包裝和運送過程。",
+    "contactMe": "聯絡我",
+    "copyright": "版權所有 © Glem 2025。保留所有權利。",
+    "departmentOfECommerce": "電子商務系",
+    "departmentOfInformationManagement": "資訊管理系",
+    "development": "開發",
+    "downloadCV": "下載履歷",
+    "e-commerceStaff": "電子商務人員",
+    "education": "教育背景",
+    "engagedInLogistics": "參與物流貨物重組與包裝。",
+    "experience": "經歷",
+    "handledCustomerServiceForms...": "處理客戶服務表單及退貨物流。",
+    "handledGoodsStorage": "處理貨物儲存、配送排程及出貨事宜。",
+    "helpedOrganizeTheOffice": "協助整理辦公室。",
+    "hi": "嗨！",
+    "hobbies": "興趣",
+    "maintainedAndCleanedWorkspace": "維護並清潔工作區域。",
+    "managedRetailInventory": "管理零售庫存控制。",
+    "myEnglishName...": "我的英文名字是 Glem，我是一名前端網頁開發者，專注於使用 React 建立網站。作為初學者，我致力於優化使用者介面與使用者體驗。我擁有扎實的技術基礎，並力求在每個專案中追求卓越。",
+    "mySelf": "我是江家瑞，住在台灣。",
+    "playingGames": "玩遊戲",
+    "privateYangDeHighSchool": "私立仰德高級中學",
+    "projects": "專案",
+    "readingBooks": "讀書",
+    "receivedAndInspectedGoods": "接收並檢查物流貨物，進行庫存盤點。",
+    "resume": "履歷",
+    "schoolAdministrativePart-timeStaff": "學校行政兼職人員",
+    "toolsOfChoice": "使用工具",
+    "traveling": "旅行",
+    "version": "版本 0.8.9",
+    "watchingMovies": "看電影",
+    "winterBreakPartTimeStaff": "寒假兼職人員"
 }

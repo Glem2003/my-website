@@ -1,157 +1,40 @@
 {
-    "footer": {
-        "copyright": "Copyright © Glem 2025.All rights reserved.",
-        "version": "version 0.8.9"
-    },
-    "header": {
-        "title": [
-            "header",
-            "title"
-        ],
-        "list": [
-            "About",
-            "Resume",
-            "Projects"
-        ]
-    },
-    "about": {
-        "headerTitle": "Hi!",
-        "headerDescription": "I'm JIANG,JIA-RUEI,I live in Taiwan",
-        "textInfo": "My English name is Glem and I am a front-end web developer primarily focused on building websites using React. As a beginner, I am dedicated to optimizing user interfaces and user experiences. I possess a solid technical foundation and strive for excellence in every project.",
-        "buttonItems": [
-            "Contact me",
-            "Download CV"
-        ]
-    },
-    "resume": {
-        "webTitle": "Resume",
-        "list": [
-            {
-                "key": "experience",
-                "listText": "Experience"
-            },
-            {
-                "key": "education",
-                "listText": "Education"
-            },
-            {
-                "key": "toolsOfChoice",
-                "listText": "Tools of choice"
-            },
-            {
-                "key": "hobbies",
-                "listText": "Hobbies"
-            }
-        ],
-        "experience": [
-            {
-                "firstDate": "2022/03",
-                "title": "E-commerce Staff",
-                "content": [
-                    "Completed the selection, packaging, and shipping processes.",
-                    "Handled customer service forms and reverse logistics."
-                ]
-            },
-            {
-                "firstDate": "2021/09",
-                "lastDate": "2022/01",
-                "title": "School Administrative Part-time Staff",
-                "content": [
-                    "Assisted students with course-related issues.",
-                    "Helped organize the office.",
-                    "Assisted with office-related tasks.",
-                    "Answered and managed phone calls."
-                ]
-            },
-            {
-                "firstDate": "2021/01",
-                "lastDate": "2021/02",
-                "title": "Winter Break Part-time Staff",
-                "content": [
-                    "Received and inspected logistics goods, performed inventory counts.",
-                    "Engaged in logistics goods reorganization and packaging.",
-                    "Maintained and cleaned the workspace.",
-                    "Handled goods storage, delivery scheduling, and shipment tasks.",
-                    "Managed retail inventory control."
-                ]
-            }
-        ],
-        "toolsOfChoice": [
-            {
-                "subtitle": "Development",
-                "title": "HTML"
-            },
-            {
-                "subtitle": "Development",
-                "title": "CSS"
-            },
-            {
-                "subtitle": "Development",
-                "title": "SASS"
-            },
-            {
-                "subtitle": "Development",
-                "title": "JavaScript"
-            },
-            {
-                "subtitle": "Development",
-                "title": "TypeScript"
-            },
-            {
-                "subtitle": "Development",
-                "title": "React"
-            }
-        ],
-        "education": [
-            {
-                "firstDate": "2021/09",
-                "title": "Chien Hsin University of Science and Technology",
-                "content": "Department of Information Management"
-            },
-            {
-                "firstDate": "2018/09",
-                "lastDate": "2021/06",
-                "title": "Private Yangde High School",
-                "content": "Department of E-commerce"
-            }
-        ],
-        "hobbies": [
-            {
-                "subtitle": "Hobbies",
-                "title": "Coding"
-            },
-            {
-                "subtitle": "Hobbies",
-                "title": "Reading Books"
-            },
-            {
-                "subtitle": "Hobbies",
-                "title": "Watching Movies"
-            },
-            {
-                "subtitle": "Hobbies",
-                "title": "Playing Games"
-            },
-            {
-                "subtitle": "Hobbies",
-                "title": "Traveling"
-            }
-        ]
-    },
-    "project": {
-        "title": "Projects"
-    },
-    "admin": {
-        "logo": "BACKEND SYSTEM",
-        "version": "0.1",
-        "list": [
-            "Dashboard",
-            "CMS",
-            "Permissions",
-            "Web Settings",
-            "Settings",
-            "Logout"
-        ],
-        "welcomeMessage": "Welcome to the admin system."
-    }
+    "about": "About",
+    "answeredAndManagedPhoneCalls": "Answered and managed phone calls.",
+    "assistedStudents...": "Assisted students with course-related issues.",
+    "assistedWithOfficeRelatedTasks": "Assisted with office-related tasks.",
+    "chienHsinUniversityOfScienceAndTechnology": "Chien Hsin University of Science and Technology",
+    "coding": "Coding",
+    "completedTheSelection...": "Completed the selection, packaging, and shipping processes.",
+    "contactMe": "Contact me",
+    "copyright": "Copyright © Glem 2025.All rights reserved.",
+    "departmentOfECommerce": "Department of E-commerce",
+    "departmentOfInformationManagement": "Department of Information Management",
+    "development": "Development",
+    "downloadCV": "Download CV",
+    "e-commerceStaff": "E-commerce Staff",
+    "education": "Education",
+    "engagedInLogistics": "Engaged in logistics goods reorganization and packaging.",
+    "experience": "Experience",
+    "handledCustomerServiceForms...": "Handled customer service forms and reverse logistics.",
+    "handledGoodsStorage": "Handled goods storage, delivery scheduling, and shipment tasks.",
+    "helpedOrganizeTheOffice": "Helped organize the office.",
+    "hi": "Hi!",
+    "hobbies": "Hobbies",
+    "maintainedAndCleanedWorkspace": "Maintained and cleaned the workspace.",
+    "managedRetailInventory": "Managed retail inventory control.",
+    "myEnglishName...": "My English name is Glem and I am a front-end web developer primarily focused on building websites using React. As a beginner, I am dedicated to optimizing user interfaces and user experiences. I possess a solid technical foundation and strive for excellence in every project.",
+    "mySelf": "I'm JIANG,JIA-RUEI,I live in Taiwan",
+    "playingGames": "Playing Games",
+    "privateYangDeHighSchool": "Private YangDe High School",
+    "projects": "Projects",
+    "readingBooks": "Reading Books",
+    "receivedAndInspectedGoods": "Received and inspected logistics goods, performed inventory counts.",
+    "resume": "Resume",
+    "schoolAdministrativePart-timeStaff": "School Administrative Part-time Staff",
+    "toolsOfChoice": "Tools of choice",
+    "traveling": "Traveling",
+    "version": "version 0.8.9",
+    "watchingMovies": "Watching Movies",
+    "winterBreakPartTimeStaff": "Winter Break Part-time Staff"
 }

@@ -1,22 +1,21 @@
 import { Link } from 'react-router-dom';
 
-//style
-import './style/header.sass';
+// style
+import './header.sass';
 
-//icon
+// icon
 import { AiOutlineCloseCircle } from '../../assets/icon/index'
 
-//hook
+// hook
 import useMobileMenuActive from '../../hook/useMobileMenuActive';
 import useIsMobile from '../../hook/useIsMobile';
+import { useTranslation } from 'react-i18next';
 
-//components
-import LanguageSwitcher from './LanguageSwitcher';
+// components
+import LanguageSwitcher from '../common/languageSwitcher/languageSwitcher';
 
-interface headerProps {
-    lists?: { to: string, text: string }[]
-    headerMenuIcon?: React.ReactNode
-}
+// type
+import { headerProps } from './header.type';
 
 const Header: React.FC<headerProps> = (props) => {
 
@@ -24,6 +23,8 @@ const Header: React.FC<headerProps> = (props) => {
         lists,
         headerMenuIcon
     } = props
+
+    const { t } = useTranslation()
 
     const { isActive: handleMenuActive, handleClick: handleMenuClick } = useMobileMenuActive()
     const { isMobile } = useIsMobile()
@@ -38,7 +39,7 @@ const Header: React.FC<headerProps> = (props) => {
                         key={index}
                         className='header__list'
                     >
-                        <Link to={list.to}>{list.text}</Link>
+                        <Link to={list.to}>{t(list.text)}</Link>
                     </li>
                 ))}
             </ul>
@@ -47,7 +48,7 @@ const Header: React.FC<headerProps> = (props) => {
 
             {/* mobile menu */}
             <div className='header__mobileMenu' onClick={handleMenuClick}>
-                {handleMenuActive ? (<AiOutlineCloseCircle style={{ color: 'black' }}/>) : headerMenuIcon}
+                {handleMenuActive ? (<AiOutlineCloseCircle style={{ color: 'black' }} />) : headerMenuIcon}
             </div>
 
             <main className='header__mobileMain'>
@@ -58,7 +59,7 @@ const Header: React.FC<headerProps> = (props) => {
                             key={index}
                             className='header__mobileList'
                         >
-                            <Link to={list.to}>{list.text}</Link>
+                            <Link to={list.to}>{t(list.text)}</Link>
                         </li>
                     ))}
                 </ul>
