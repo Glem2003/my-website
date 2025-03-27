@@ -15,7 +15,8 @@ const Button: React.FC<buttonProps> = (props) => {
             className={
                 clsx(
                     className,
-                    icon ? style.button : `${style.button} ${style['button--display-block']}`
+                    icon ? style.button : `${style.button} ${style['button--display-block']}`,
+                    disabled && `${style['button--disabled']}`
                 )
             }
             disabled={disabled}

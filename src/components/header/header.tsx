@@ -66,6 +66,7 @@ const Header: React.FC<headerProps> = (props) => {
 
                 {isMobile && (<LanguageSwitcher />)}
 
+                <div className="header__mainBody" onClick={handleMenuClick}></div>
             </main>
 
         </header>

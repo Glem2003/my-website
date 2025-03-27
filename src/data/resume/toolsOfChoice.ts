@@ -22,5 +22,9 @@ export const toolsOfChoice = [
     {
         "subtitle": "development",
         "title": "React"
+    },
+    {
+        "subtitle": "development",
+        "title": "Python"
     }
 ]
