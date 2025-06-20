@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 import { Suspense } from 'react'
 
 // components
@@ -10,7 +10,7 @@ import { routes } from "../data/routes"
 const AppRoute = () => {
 
     return (
-        <BrowserRouter basename="/my-website">
+        <HashRouter>
             <Suspense fallback={<Loading />}>
                 <Routes>
                     {routes.map(({ path, element, index }) => (
@@ -18,7 +18,7 @@ const AppRoute = () => {
                     ))}
                 </Routes>
             </Suspense>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 

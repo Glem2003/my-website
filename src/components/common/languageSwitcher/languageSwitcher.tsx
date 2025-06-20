@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // hook
-import useIsMobile from '../../../hook/useIsMobile';
+import useBreakPoint from '../../../hook/useBreakPoint';
 
 // style
 import './languageSwitcher.sass';
 
 const LanguageSwitcher = () => {
 
-    const { isMobile } = useIsMobile()
+    const { isMobile } = useBreakPoint()
     const { i18n } = useTranslation()
 
     const [isChecked, setIsChecked] = useState<boolean>(i18n.language === 'zh-TW');

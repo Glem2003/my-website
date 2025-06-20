@@ -8,8 +8,8 @@ import { AiOutlineCloseCircle } from '../../assets/icon/index'
 
 // hook
 import useMobileMenuActive from '../../hook/useMobileMenuActive';
-import useIsMobile from '../../hook/useIsMobile';
 import { useTranslation } from 'react-i18next';
+import useBreakPoint from '../../hook/useBreakPoint';
 
 // components
 import LanguageSwitcher from '../common/languageSwitcher/languageSwitcher';
@@ -27,7 +27,7 @@ const Header: React.FC<headerProps> = (props) => {
     const { t } = useTranslation()
 
     const { isActive: handleMenuActive, handleClick: handleMenuClick } = useMobileMenuActive()
-    const { isMobile } = useIsMobile()
+    const { isMobile } = useBreakPoint()
 
     return (
         <header className='header'>

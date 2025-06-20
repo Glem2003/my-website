@@ -3,7 +3,8 @@ import {
     EC,
     TaskManger,
     BlogPlatform,
-    SpotifyDemo
+    SpotifyDemo,
+    StoreBackend
 } from '../assets/images/index';
 
 const projectContent = [
@@ -38,6 +39,14 @@ const projectContent = [
         projectName: 'Spotify Demo',
         firstData: '2025/03',
         lastData: '2025/03',
+    },
+    {
+        image: StoreBackend,
+        imagesName: 'Store Backend Demo',
+        projectLink: 'https://glem2003.github.io/store-backend/',
+        projectName: 'Store Backend Demo',
+        firstData: '2025/04',
+        lastData: '2025/06',
     }
 ]
 
