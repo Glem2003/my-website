@@ -1,11 +1,9 @@
 // icon
 import { MdArrowOutward } from "../../../assets/icon/index";
 
-// style
-import style from './projectCard.module.sass'
-
 // components
 import ShowMoreContainer from "../showMoreContainer/showMoreContainer";
+import { Box, Link, Typography, Button } from '@mui/material';
 
 // type
 import { projectCardProps } from "./projectCard.type";
@@ -22,31 +20,41 @@ const ProjectCard: React.FC<projectCardProps> = (props) => {
     } = props
 
     return (
-        <div className={style.projectCard}>
-            <div className={style.imagesCard}>
-
-                <a href={image} target="_blank" rel="noopener noreferrer">
+        <Box sx={{ display: 'grid', gap: '10px' }}>
+            <Box sx={{
+                height: '250px',
+                borderRadius: '10px',
+                border: '2px dotted green',
+                overflow: "hidden",
+                position: 'relative'
+            }}>
+                <Link href={image} target='_blank'>
                     <ShowMoreContainer />
-                </a>
+                </Link>
 
                 <img
-                    className={style.image}
+                    style={{ objectFit: 'cover' }}
                     src={image}
                     alt={imagesName}
                 />
-            </div>
+            </Box>
 
-            <h6 className={style.date}>{`${firstData} - ${lastData}`}</h6>
+            <Typography variant='inherit' sx={{ color: 'grey' }}>{`${firstData} - ${lastData}`}</Typography>
 
-            <a href={projectLink} target={"_blank"} rel="noopener noreferrer" className={style.linkBox}>
-                <h4 className={style.link}>
-                    {projectName}
-                    <span className={style.icon}>
-                        <MdArrowOutward />
-                    </span>
-                </h4>
-            </a>
-        </div>
+            <Button
+                href={projectLink}
+                target="_blank"
+                endIcon={<MdArrowOutward />}
+                size='large'
+                color='inherit'
+                sx={{
+                    width: 'max-content',
+                    pl: 0
+                }}
+            >
+                {projectName}
+            </Button>
+        </Box >
     )
 }
 

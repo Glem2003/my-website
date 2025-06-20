@@ -6,7 +6,7 @@ import style from './button.module.sass'
 // type
 import { buttonProps } from './button.type'
 
-const Button: React.FC<buttonProps> = (props) => {
+export const Button: React.FC<buttonProps> = (props) => {
 
     const { name, icon, disabled, btnClick, className, type = 'button' } = props
 
@@ -28,5 +28,3 @@ const Button: React.FC<buttonProps> = (props) => {
         </button>
     )
 }
-
-export default Button

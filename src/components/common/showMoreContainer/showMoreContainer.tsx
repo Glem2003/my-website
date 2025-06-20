@@ -1,14 +1,17 @@
 // icon
 import { FaEye } from "../../../assets/icon/index";
 
+// components
+import { Box } from "@mui/material";
+
 // style
-import style from './showMoreContainer.module.sass'
+import { ShowMoreContainerStyle, ShowMoreSvgStyle } from "./showMoreContainerStyle";
 
 const ShowMoreContainer = () => {
     return (
-        <div className={style.imageShow}>
-            <FaEye />
-        </div>
+        <Box sx={ShowMoreContainerStyle}>
+            <FaEye style={ShowMoreSvgStyle} />
+        </Box>
     )
 }
 
