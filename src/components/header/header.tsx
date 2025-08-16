@@ -1,76 +1,68 @@
-import { Link } from 'react-router-dom';
-
-// style
-import './header.sass';
+// component
+import {
+    Box,
+    Container,
+    Typography,
+    Stack,
+    IconButton
+} from "@mui/material"
+import MenuButton from "../common/menuButton/menuButton"
 
 // icon
-import { AiOutlineCloseCircle } from '../../assets/icon/index'
+import { IoLanguage, FaDev } from '../../assets/icon/index'
 
-// hook
-import useMobileMenuActive from '../../hook/useMobileMenuActive';
-import { useTranslation } from 'react-i18next';
-import useBreakPoint from '../../hook/useBreakPoint';
-
-// components
-import LanguageSwitcher from '../common/languageSwitcher/languageSwitcher';
+// style
+import {
+    header,
+    headerContainer,
+    headerTitle,
+    headerTitleText,
+    headerTitleBtns,
+    headerTitleBtn,
+    headerMenu,
+    headerMenuBtns
+} from "./header.style"
 
 // type
-import { headerProps } from './header.type';
+import { HeaderType } from "./header.type"
 
-const Header: React.FC<headerProps> = (props) => {
+const Header: React.FC<HeaderType> = (props) => {
 
-    const {
-        lists,
-        headerMenuIcon
-    } = props
-
-    const { t } = useTranslation()
-
-    const { isActive: handleMenuActive, handleClick: handleMenuClick } = useMobileMenuActive()
-    const { isMobile } = useBreakPoint()
+    const { navItems } = props
 
     return (
-        <header className='header'>
+        <Box {...header} >
+            <Container {...headerContainer}>
 
-            {/* desktop menu */}
-            <ul className='header__menu'>
-                {lists && lists.map((list, index) => (
-                    <li
-                        key={index}
-                        className='header__list'
-                    >
-                        <Link to={list.to}>{t(list.text)}</Link>
-                    </li>
-                ))}
-            </ul>
+                <Box {...headerTitle}>
+                    <Typography {...headerTitleText}>
+                        GLEM'S
+                        <br />
+                        WEB
+                    </Typography>
 
-            {!isMobile && (<LanguageSwitcher />)}
+                    <Stack {...headerTitleBtns}>
+                        <IconButton {...headerTitleBtn}>
+                            <IoLanguage />
+                        </IconButton>
+                        <IconButton {...headerTitleBtn}>
+                            <FaDev />
+                        </IconButton>
+                    </Stack>
+                </Box>
 
-            {/* mobile menu */}
-            <div className='header__mobileMenu' onClick={handleMenuClick}>
-                {handleMenuActive ? (<AiOutlineCloseCircle style={{ color: 'black' }} />) : headerMenuIcon}
-            </div>
+                <Box {...headerMenu}>
+                    <Stack {...headerMenuBtns}>
+                        {navItems && navItems.map((item) => {
+                            return (
+                                <MenuButton key={item.text} text={item.text} href={item.to} />
+                            )
+                        })}
+                    </Stack>
+                </Box>
+            </Container>
+        </Box>
+    )
+}
 
-            <main className='header__mobileMain'>
-
-                <ul className='header__mobileItem'>
-                    {lists && lists.map((list, index) => (
-                        <li
-                            key={index}
-                            className='header__mobileList'
-                        >
-                            <Link to={list.to}>{t(list.text)}</Link>
-                        </li>
-                    ))}
-                </ul>
-
-                {isMobile && (<LanguageSwitcher />)}
-
-                <div className="header__mainBody" onClick={handleMenuClick}></div>
-            </main>
-
-        </header>
-    );
-};
-
-export default Header;
+export default Header

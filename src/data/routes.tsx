@@ -4,12 +4,16 @@ import { lazy } from 'react'
 import NotFound from '../components/common/notFound/notFound'
 
 // Lazy load
+const Home = lazy(() => import('../pages/home'))
 const About = lazy(() => import("../pages/about"))
 const Projects = lazy(() => import("../pages/projects"))
+const Serve = lazy(() => import('../pages/serve'))
 
 // Routes Config
 export const routes = [
-    { path: '/', element: <About />, index: true },
-    { path: '/Projects', element: <Projects /> },
+    { path: '/', element: <Home />, index: true },
+    { path: '/about', element: <About /> },
+    { path: '/projects', element: <Projects /> },
+    { path: '/serve', element: <Serve /> },
     { path: "*", element: <NotFound /> }
 ]

@@ -1,4 +1,5 @@
-export interface defaultPagesProps {
-    navItems?: { to: string, text: string }[]
-    children?: JSX.Element
+export interface DefaultPagesType {
+    children?: React.ReactNode
+    title: string
+    subtitle?: string
 }

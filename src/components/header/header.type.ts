@@ -1,4 +1,3 @@
-export interface headerProps {
-    lists?: { to: string, text: string }[]
-    headerMenuIcon?: React.ReactNode
+export interface HeaderType {
+    navItems: { text: string, to: string }[]
 }
