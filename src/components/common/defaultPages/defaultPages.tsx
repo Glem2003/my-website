@@ -36,7 +36,7 @@ const DefaultPages: React.FC<DefaultPagesType> = (props) => {
                 </Container>
             </Box>
 
-            <Footer text={['Copyright © Glem 2025.', 'version 0.9.6']} />
+            <Footer text={['Copyright © Glem 2025.', 'version 1.0.0']} />
 
         </Box>
     )

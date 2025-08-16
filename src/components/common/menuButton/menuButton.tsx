@@ -15,7 +15,7 @@ const MenuButton: React.FC<MenuButtonType> = (props) => {
         <Button
             size="large"
             sx={menuButton}
-            href={`/#${href}`}
+            href={`${process.env.PUBLIC_URL}/#${href}`}
         >
             {text}
         </Button>
