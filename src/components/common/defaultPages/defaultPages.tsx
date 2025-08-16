@@ -1,58 +1,44 @@
-// hook
-import { useTranslation } from 'react-i18next';
-import useBreakPoint from '../../../hook/useBreakPoint';
-
-// icon
-import { CgMenuHotdog } from "../../../assets/icon/index";
-
 // component
-import Header from "../../header/header";
-import { Box, Typography } from '@mui/material';
-
-// type
-import { defaultPagesProps } from './defaultPages.type'
+import {
+    Box,
+    Container,
+} from "@mui/material"
+import Header from "../../header/header"
+import Footer from "../../../components/footer/footer"
+import MainTitle from "../mainTitle/mainTitle"
 
 // data
-import { navItems } from '../../../data/navItems';
-import { footerData } from '../../../data/footerData';
+import { navItems } from "../../../data/navItems"
 
-const DefaultPages: React.FC<defaultPagesProps> = (props) => {
+// type
+import { DefaultPagesType } from "./defaultPages.type"
 
-    const { isMobile } = useBreakPoint()
+// style
+import { pagesStyle, pagesMain } from "./defaultPages.style"
 
-    const { t } = useTranslation()
-    const { children } = props
+const DefaultPages: React.FC<DefaultPagesType> = (props) => {
+
+    const {
+        children,
+        title,
+        subtitle
+    } = props
 
     return (
-        <>
-            <Header
-                lists={navItems}
-                headerMenuIcon={<CgMenuHotdog />}
-            />
-            {children}
-            <Box
-                component={'footer'}
-                sx={{
-                    p: '15px 0',
-                    textAlign: 'center',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    gap: !isMobile ? '10px' : '5px',
-                    flexDirection: 'row',
-                }}
-            >
-                {footerData.map((item, index) => {
-                    return (
-                        <Typography
-                            key={index}
-                            variant={!isMobile ? 'h6' : 'subtitle2'}
-                        >
-                            {t(item)}
-                        </Typography>
-                    )
-                })}
+        <Box {...pagesStyle}>
+
+            <Header navItems={navItems} />
+
+            <Box {...pagesMain}>
+                <Container maxWidth={false}>
+                    <MainTitle title={title} subtitle={subtitle} />
+                    {children}
+                </Container>
             </Box>
-        </>
+
+            <Footer text={['Copyright © Glem 2025.', 'version 1.0.0']} />
+
+        </Box>
     )
 }
 

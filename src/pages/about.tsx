@@ -1,5 +1,5 @@
 // icon
-import { MdArrowOutward, IoMdDownload } from '../assets/icon/index';
+import { MdArrowOutward } from '../assets/icon/index';
 
 // hook
 import { useTranslation } from 'react-i18next';
@@ -15,11 +15,10 @@ const AboutPage = () => {
     const { t } = useTranslation();
 
     return (
-        <DefaultPages>
+        <DefaultPages title='about' subtitle='raw information'>
             <Container
                 component={'section'}
             >
-
                 <Typography
                     variant={!isMobile ? 'h2' : 'h4'}
                     sx={{ fontWeight: 550, mb: 1 }}
@@ -58,10 +57,10 @@ const AboutPage = () => {
 
                     <Button
                         variant="outlined"
-                        endIcon={<IoMdDownload />}
                         color='secondary'
+                        disabled
                     >
-                        {t('downloadCV')}
+                        {t('serve')}
                     </Button>
                 </Box>
 

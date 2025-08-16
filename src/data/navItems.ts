@@ -1,14 +1,14 @@
 export const navItems = [
     {
-        to: '/',
+        to: '/projects',
+        text: ('projects')
+    },
+    {
+        to: '/about',
         text: ('about')
     },
     {
-        to: '/resume',
-        text: ('resume')
-    },
-    {
-        to: '/projects',
-        text: ('projects')
+        to: '/serve',
+        text: ('serve')
     }
 ]
