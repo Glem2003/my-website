@@ -27,7 +27,7 @@ const DefaultPages: React.FC<DefaultPagesType> = (props) => {
     return (
         <Box {...pagesStyle}>
 
-            <Header navItems={navItems} />
+            <Header navItems={navItems}/>
 
             <Box {...pagesMain}>
                 <Container maxWidth={false}>
