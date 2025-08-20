@@ -2,7 +2,12 @@
 //import { Box } from "@mui/material"
 import DefaultPages from "../components/common/defaultPages/defaultPages"
 
+// hooks
+import { useTranslation } from "react-i18next"
+
 const HomePage = () => {
+
+    const { t } = useTranslation()
 
     /*
     alert(`*The current version is still under development, some features are not ready yet!*
@@ -12,7 +17,7 @@ const HomePage = () => {
     */
 
     return (
-        <DefaultPages title="home" subtitle="central hub">
+        <DefaultPages title={t("home")} subtitle={t("central_hub")}>
         </DefaultPages>
     )
 }

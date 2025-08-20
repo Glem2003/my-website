@@ -2,7 +2,8 @@ export const header = {
     component: 'header',
     borderBottom: '4px solid black',
     pt: 4,
-    pb: 4
+    pb: 4,
+    mb: 6
 }
 
 export const headerTitle = {
