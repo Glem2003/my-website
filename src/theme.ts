@@ -5,6 +5,10 @@ const theme = createTheme({
         primary: {
             main: "#000000",
             contrastText: "#ffffffff"
+        },
+        secondary: {
+            main: "#ffaa00ff",
+            contrastText: '"#000000"'
         }
     },
     typography: {

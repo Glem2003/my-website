@@ -20,14 +20,15 @@ export const headerTitle = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column' as const,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
 }
 
 export const headerTitleText = {
     variant: "h2" as const,
     fontWeight: 700,
     fontFamily: "JetBrains Mono, monospace",
-    lineHeight: '60px'
+    lineHeight: '60px',
+    textAlign: 'left' as const
 }
 
 export const headerTitleBtns = {

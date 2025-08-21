@@ -15,7 +15,7 @@ const AboutPage = () => {
     const { t } = useTranslation();
 
     return (
-        <DefaultPages title='about' subtitle='raw information'>
+        <DefaultPages title={t('about')} subtitle={t('raw_information')}>
             <Container
                 component={'section'}
             >
