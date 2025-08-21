@@ -1,5 +1,6 @@
 // hooks
 import { useTranslation } from "react-i18next"
+import useBreakPoint from "../../../hook/useBreakPoint"
 
 // components
 import {
@@ -39,6 +40,7 @@ import {
 const ProjectContent: React.FC<projectContentType> = (props) => {
 
     const { t } = useTranslation()
+    const { isMobile } = useBreakPoint()
     const {
         open,
         onClose,
@@ -60,7 +62,10 @@ const ProjectContent: React.FC<projectContentType> = (props) => {
         >
             <DialogTitle {...header}>
                 <Box {...headerBox}>
-                    <Typography {...headerTitle}>
+                    <Typography
+                        {...headerTitle}
+                        variant={isMobile ? 'h5' : headerTitle.variant}
+                    >
                         {title}
                     </Typography>
                     <ButtonGroup>
@@ -73,10 +78,9 @@ const ProjectContent: React.FC<projectContentType> = (props) => {
                     </ButtonGroup>
                 </Box>
                 <DialogActions>
-                    <IconButton size="large">
+                    <IconButton size={isMobile ? 'small' : 'medium'} onClick={onClose}>
                         <AiFillCloseCircle
                             color="black"
-                            onClick={onClose}
                         />
                     </IconButton>
                 </DialogActions>
@@ -100,9 +104,11 @@ const ProjectContent: React.FC<projectContentType> = (props) => {
                         <Grid
                             size={12}
                             display={{ xs: 'none', sm: 'block' }}
-                            flex={1}
+                            height={{ sm: '30%' }}
                         >
-                            <ProjectContentUse lib={lib || []} />
+                            <Box>
+                                <ProjectContentUse lib={lib || []} />
+                            </Box>
                         </Grid>
                     </Grid>
                     <Grid

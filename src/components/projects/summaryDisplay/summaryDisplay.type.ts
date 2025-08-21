@@ -1,4 +1,5 @@
 export interface SummaryDisplayType {
     value: number,
-    title: string
+    title: string,
+    decimals?: number
 }

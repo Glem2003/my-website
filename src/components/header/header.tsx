@@ -30,11 +30,9 @@ import { HeaderType } from "./header.type"
 // hooks
 import useBreakPoint from "../../hook/useBreakPoint"
 import useMenuActive from "../../hook/useMenuActive"
-import { useTranslation } from "react-i18next"
 
 const Header: React.FC<HeaderType> = (props) => {
 
-    const { t } = useTranslation()
     const { isMobile } = useBreakPoint()
     const { handleActive } = useMenuActive()
 
@@ -61,8 +59,8 @@ const Header: React.FC<HeaderType> = (props) => {
                     </Link>
 
                     <Stack {...headerTitleBtns}>
-                        <IconButton {...headerTitleBtn}>
-                            <IoLanguage onClick={handleLangBtn} />
+                        <IconButton {...headerTitleBtn} onClick={handleLangBtn}>
+                            <IoLanguage />
                         </IconButton>
                         <IconButton {...headerTitleBtn}>
                             <FaDev />
@@ -76,7 +74,7 @@ const Header: React.FC<HeaderType> = (props) => {
                             return (
                                 <MenuButton
                                     key={item.text}
-                                    text={t(item.text)}
+                                    text={item.text}
                                     href={item.to}
                                     onClick={() => handleActive(item.text, item.to)}
                                 />

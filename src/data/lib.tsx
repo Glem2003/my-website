@@ -1,17 +1,19 @@
 // icon
 import {
-    TbBrandReact,
+    FaReact,
     DiSass,
     SiRedux,
     RiJavascriptLine,
     TbBrandTypescript,
-    AiOutlineAntDesign
+    AiOutlineAntDesign,
+    FaBootstrap,
+    SiMui
 } from '../assets/icon/index'
 
 export const lib = [
     {
         title: "React",
-        icon: <TbBrandReact color='purple' />
+        icon: <FaReact color='#5d0adaff' />
     },
     {
         title: "Redux",
@@ -31,6 +33,14 @@ export const lib = [
     },
     {
         title: 'Antd',
-        icon: <AiOutlineAntDesign />
+        icon: <AiOutlineAntDesign color='#ef2166ff' />
+    },
+    {
+        title: 'Bootstrap',
+        icon: <FaBootstrap color='blue'/>
+    },
+    {
+        title: 'Mui',
+        icon: <SiMui color='blue'/>
     }
 ]

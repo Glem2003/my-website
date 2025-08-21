@@ -52,7 +52,7 @@ const DefaultPages: React.FC<DefaultPagesType> = (props) => {
 
             <Footer text={[
                 `${t('copyright')} © Glem ${year}.`,
-                `${t('version')} 1.0.0`
+                `${t('version')} 1.0.4`
             ]} />
 
             <LangMenu

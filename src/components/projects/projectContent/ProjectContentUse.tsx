@@ -2,7 +2,7 @@
 import {
     IconButton,
     Typography,
-    ButtonGroup,
+    Grid,
 } from "@mui/material"
 
 // hooks
@@ -21,23 +21,25 @@ const ProjectContentUse = ({ lib }: { lib: string[] }) => {
 
     const { t } = useTranslation()
 
-    console.log(libData.filter((libItem) => lib.includes(libItem.title)))
-
     return (
         <>
             <Typography mt={2} ml={2} {...text}>
                 {t('use')}
             </Typography>
-            <ButtonGroup sx={{ gap: 2, mt: 2 }}>
+            <Grid container>
                 {libData
                     .filter((libItem) => lib.includes(libItem.title))
                     .map((item) => (
-                        <IconButton key={item.title} {...useLibIcon} title={item.title}>
+                        <IconButton
+                            {...useLibIcon}
+                            key={item.title}
+                            title={item.title}
+                        >
                             {item.icon}
                         </IconButton>
                     ))
                 }
-            </ButtonGroup>
+            </Grid>
         </>
     )
 }

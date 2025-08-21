@@ -8,12 +8,14 @@ import { IoIosMore } from "react-icons/io";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { IoLink } from "react-icons/io5";
 import { IoMdCode } from "react-icons/io";
-import { TbBrandReact } from "react-icons/tb";
+import { FaReact } from "react-icons/fa6";
 import { SiRedux } from "react-icons/si";
 import { DiSass } from "react-icons/di";
 import { RiJavascriptLine } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
 import { AiOutlineAntDesign } from "react-icons/ai";
+import { FaBootstrap } from "react-icons/fa6";
+import { SiMui } from "react-icons/si";
 
 export {
     MdArrowOutward,
@@ -26,10 +28,12 @@ export {
     AiFillCloseCircle,
     IoLink,
     IoMdCode,
-    TbBrandReact,
+    FaReact,
     SiRedux,
     DiSass,
     RiJavascriptLine,
     TbBrandTypescript,
-    AiOutlineAntDesign
+    AiOutlineAntDesign,
+    FaBootstrap,
+    SiMui
 }

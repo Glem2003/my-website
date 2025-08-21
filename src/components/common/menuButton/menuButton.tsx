@@ -10,9 +10,11 @@ import { MenuButtonType } from "./menuButton.type"
 // hooks
 import useMenuActive from "../../../hook/useMenuActive"
 import useBreakPoint from "../../../hook/useBreakPoint"
+import { useTranslation } from "react-i18next"
 
 const MenuButton: React.FC<MenuButtonType> = (props) => {
 
+    const { t } = useTranslation()
     const { isMobile } = useBreakPoint()
     const { isMenuActive } = useMenuActive()
 
@@ -30,7 +32,7 @@ const MenuButton: React.FC<MenuButtonType> = (props) => {
             href={`${process.env.PUBLIC_URL}/#${href}`}
             onClick={onClick}
         >
-            {text}
+            {t(text)}
         </Button>
     )
 }
