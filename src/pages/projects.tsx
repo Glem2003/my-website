@@ -11,6 +11,7 @@ import SummaryDisplay from '../components/projects/summaryDisplay/summaryDisplay
 import ProjectCard from '../components/projects/projectCard/projectCard';
 import ProjectContent from '../components/projects/projectContent/projectContent';
 import ProjectLists from '../components/projects/projectLists/projectLists';
+import InfoPanel from '../components/common/infoPanel/infoPanel';
 
 // hook
 import { useTranslation } from 'react-i18next';
@@ -25,7 +26,7 @@ import { FaList, FaTable } from '../assets/icon/index'
 import projectData from '../data/project';
 
 // style
-import { section, table } from './style/projects.style';
+import { section } from './style/projects.style';
 
 // utils
 import { sumDiffMonths } from '../utils/diffMonths';
@@ -63,8 +64,9 @@ const ProjectsPage = () => {
                 />
             </Box>
 
-            <Box border={'4px solid black'} component={'section'}>
-                <Box {...table}>
+            <InfoPanel
+                headerJustifyContent='flex-end'
+                header={
                     <ButtonGroup sx={{ gap: 1 }}>
                         <IconButton
                             size='large'
@@ -87,8 +89,8 @@ const ProjectsPage = () => {
                             />
                         </IconButton>
                     </ButtonGroup>
-                </Box>
-
+                }
+            >
                 <Grid container size={12} spacing={2} p={2}>
                     {isDataType === 'list' ? (
                         <List
@@ -131,7 +133,7 @@ const ProjectsPage = () => {
                         </>
                     )}
                 </Grid>
-            </Box>
+            </InfoPanel>
 
             <ProjectContent
                 open={isOpen}

@@ -8,7 +8,6 @@ import {
 } from "@mui/material"
 
 // hooks
-import useLangSettingMenu from "../../../hook/useLangSettingMenu"
 import { useTranslation } from 'react-i18next';
 
 // data
@@ -20,13 +19,7 @@ import { langMenuType } from "./langMenu.type"
 const LangMenu: React.FC<langMenuType> = (props) => {
 
     const { t } = useTranslation()
-    const { open, onClose } = props
-
-    const {
-        isLang,
-        isLoad,
-        handleActive,
-    } = useLangSettingMenu()
+    const { open, onClose, handleActive, isLoad, isLang } = props
 
     return (
         <Dialog

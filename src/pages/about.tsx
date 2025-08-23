@@ -1,70 +1,65 @@
-// icon
-import { MdArrowOutward } from '../assets/icon/index';
-
 // hook
 import { useTranslation } from 'react-i18next';
-import useBreakPoint from '../hook/useBreakPoint';
 
-// component
+// components
+import {
+    Grid,
+    Typography,
+    List,
+    ListItem,
+} from '@mui/material';
 import DefaultPages from '../components/common/defaultPages/defaultPages';
-import { Button, Typography, Container, Box } from '@mui/material';
+import InfoSection from '../components/about/infoSection/infoSection';
+import InfoPanel from '../components/common/infoPanel/infoPanel';
+import LinearProgressWithLabel from '../components/about/LinearProgressWithLabel/linearProgressWithLabel';
+
+// data
+import { skillsData } from '../data/skillsData';
 
 const AboutPage = () => {
 
-    const { isMobile } = useBreakPoint()
     const { t } = useTranslation();
 
     return (
         <DefaultPages title={t('about')} subtitle={t('raw_information')}>
-            <Container
-                component={'section'}
-            >
-                <Typography
-                    variant={!isMobile ? 'h2' : 'h4'}
-                    sx={{ fontWeight: 550, mb: 1 }}
-                >
-                    {t('hi')}
-                </Typography>
-                <Box sx={{ width: '70%' }}>
-                    <Typography
-                        variant={!isMobile ? 'h4' : 'h5'}
-                        sx={{ fontWeight: 550, mb: 1 }}
-                    >
-                        {t('mySelf')}
-                    </Typography>
-                    <Typography
-                        variant='h6'
-                    >
-                        {t('myEnglishName...')}
-                    </Typography>
-                </Box>
 
-                <Box component={'div'} sx={{
-                    p: '20px 0',
-                    display: 'flex',
-                    gap: '20px',
-                    flexDirection: !isMobile ? 'row' : 'column',
-                    alignItems: !isMobile ? 'center' : 'start'
-                }}>
-                    <Button
-                        variant="contained"
-                        endIcon={<MdArrowOutward />}
-                        color='warning'
-                        href='mailto:glem920813@gmail.com'
-                    >
-                        {t('contactMe')}
-                    </Button>
+            <InfoSection />
 
-                    <Button
-                        variant="outlined"
-                        color='secondary'
-                        disabled
+            <Grid container mt={6} spacing={4}>
+                <Grid size={{ xs: 12, md: 6 }} border={'1px solid red'}>
+                    <InfoPanel
+                        header={
+                            <Typography p={1} pl={2} variant='h6' fontWeight={700}>Technical Skills</Typography>
+                        }
                     >
-                        {t('serve')}
-                    </Button>
-                </Box>
+                        <List>
+                            {skillsData.map((item) => {
+                                return (
+                                    <ListItem>
+                                        <LinearProgressWithLabel
+                                            fullWidth
+                                            name={item.name}
+                                            value={item.value}
+                                        />
+                                    </ListItem>
+                                )
+                            })}
+                        </List>
+                    </InfoPanel>
+                </Grid>
 
-            </Container>
+                <Grid size={{ xs: 12, md: 6 }} border={'1px solid red'}>
+                    <InfoPanel
+                        header={
+                            <Typography p={1} pl={2} variant='h6' fontWeight={700}>Experience</Typography>
+                        }
+                    >
+                        content
+                    </InfoPanel>
+                </Grid>
+
+            </Grid>
+
         </DefaultPages >
     )
 }

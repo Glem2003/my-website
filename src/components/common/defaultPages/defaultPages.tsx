@@ -2,6 +2,8 @@
 import {
     Box,
     Container,
+    Snackbar,
+    IconButton
 } from "@mui/material"
 import Header from "../../header/header"
 import Footer from "../../../components/footer/footer"
@@ -21,10 +23,13 @@ import { pagesStyle, pagesMain } from "./defaultPages.style"
 import { useTranslation } from "react-i18next"
 import useLangSettingMenu from "../../../hook/useLangSettingMenu"
 
+// icon
+import { IoMdClose } from '../../../assets/icon/index'
+
 const DefaultPages: React.FC<DefaultPagesType> = (props) => {
 
     const { t } = useTranslation()
-    const { handleMenuControl, isOpen } = useLangSettingMenu()
+    const { isOpen, isLang, isLoad, isMessageShow, setMessageShow, handleMenuControl, handleActive } = useLangSettingMenu()
 
     const {
         children,
@@ -57,7 +62,22 @@ const DefaultPages: React.FC<DefaultPagesType> = (props) => {
 
             <LangMenu
                 open={isOpen}
+                isLoad={isLoad}
+                isLang={isLang}
                 onClose={handleMenuControl}
+                handleActive={handleActive}
+            />
+
+            <Snackbar
+                open={isMessageShow}
+                autoHideDuration={6000}
+                message={t('language_has_changed')}
+                onClose={() => setMessageShow(prev => !prev)}
+                action={
+                    <IconButton onClick={() => setMessageShow(false)}>
+                        <IoMdClose color="white" />
+                    </IconButton>
+                }
             />
 
         </Box>

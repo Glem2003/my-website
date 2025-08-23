@@ -16,6 +16,12 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { FaBootstrap } from "react-icons/fa6";
 import { SiMui } from "react-icons/si";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { RiMapPinLine } from "react-icons/ri";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { FaLinkedinIn } from "react-icons/fa";
+import { GoPerson } from "react-icons/go";
+import { IoMdClose } from "react-icons/io";
 
 export {
     MdArrowOutward,
@@ -35,5 +41,11 @@ export {
     TbBrandTypescript,
     AiOutlineAntDesign,
     FaBootstrap,
-    SiMui
+    SiMui,
+    MdOutlineMailOutline,
+    RiMapPinLine,
+    TbBrandGithubFilled,
+    FaLinkedinIn,
+    GoPerson,
+    IoMdClose
 }

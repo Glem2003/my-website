@@ -9,14 +9,16 @@ const useLangSettingMenu = () => {
     const [isOpen, setOpen] = useState<boolean>(false)
     const [isLoad, setLoad] = useState<boolean>(false)
     const [isLang, setLang] = useState<string>(i18n.language)
+    const [isMessageShow, setMessageShow] = useState<boolean>(false)
 
     const handleActive = (lang: string) => {
         setLoad(true)
         setTimeout(() => {
             setLang(lang)
             i18n.changeLanguage(lang)
-            setOpen(prev => !prev)
+            setOpen(false)
             setLoad(false)
+            setMessageShow(true)
         }, 2000)
     }
 
@@ -28,7 +30,8 @@ const useLangSettingMenu = () => {
         isLang,
         isOpen,
         isLoad,
-        setOpen,
+        isMessageShow,
+        setMessageShow,
         handleActive,
         handleMenuControl
     }
