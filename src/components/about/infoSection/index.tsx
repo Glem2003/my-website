@@ -8,7 +8,7 @@ import {
     ListItem,
     ListItemText,
 } from '@mui/material';
-import InfoPanel from '../../common/infoPanel/infoPanel';
+import InfoPanel from '../../common/infoPanel';
 
 // type
 import { TypographyVariant } from '@mui/material';
@@ -32,7 +32,7 @@ import {
     contact,
     contactHeaderTitle,
     contactBtn
-} from './infoSection.style'
+} from './style'
 
 // hooks
 import useBreakPoint from '../../../hook/useBreakPoint';
@@ -66,7 +66,7 @@ const InfoSection = () => {
                     Hi, I'm Glem
                 </Typography>
                 <Typography variant='h6'>
-                    {t('frontend_developer')}
+                    {t('frontend developer')}
                 </Typography>
                 <Typography variant='body1' textAlign={{ xs: 'center', md: 'left' }}>
                     {t('about_info')}

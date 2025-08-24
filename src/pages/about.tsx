@@ -7,14 +7,17 @@ import {
     Typography,
     List,
     ListItem,
+    Divider,
 } from '@mui/material';
-import DefaultPages from '../components/common/defaultPages/defaultPages';
-import InfoSection from '../components/about/infoSection/infoSection';
-import InfoPanel from '../components/common/infoPanel/infoPanel';
-import LinearProgressWithLabel from '../components/about/LinearProgressWithLabel/linearProgressWithLabel';
+import DefaultPages from '../components/common/defaultPages';
+import InfoSection from '../components/about/infoSection';
+import InfoPanel from '../components/common/infoPanel';
+import LinearProgressWithLabel from '../components/about/linearProgressWithLabel';
+import ExperienceInfo from '../components/about/experienceInfo';
 
 // data
 import { skillsData } from '../data/skillsData';
+import { experienceData } from '../data/experienceData';
 
 const AboutPage = () => {
 
@@ -29,7 +32,9 @@ const AboutPage = () => {
                 <Grid size={{ xs: 12, md: 6 }} border={'1px solid red'}>
                     <InfoPanel
                         header={
-                            <Typography p={1} pl={2} variant='h6' fontWeight={700}>Technical Skills</Typography>
+                            <Typography p={1} pl={2} variant='h6' fontWeight={700}>
+                                {t('technical_skills')}
+                            </Typography>
                         }
                     >
                         <List>
@@ -48,13 +53,32 @@ const AboutPage = () => {
                     </InfoPanel>
                 </Grid>
 
-                <Grid size={{ xs: 12, md: 6 }} border={'1px solid red'}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <InfoPanel
                         header={
-                            <Typography p={1} pl={2} variant='h6' fontWeight={700}>Experience</Typography>
+                            <Typography p={1} pl={2} variant='h6' fontWeight={700}>
+                                {t('experience')}
+                            </Typography>
                         }
                     >
-                        content
+                        <List>
+                            {experienceData.map((item, index) => {
+                                return (
+                                    <>
+                                        <ExperienceInfo
+                                            key={index}
+                                            {...item}
+                                        />
+                                        {experienceData.length > index + 1 && (
+                                            <Divider
+                                                variant='middle'
+                                                sx={{ opacity: 0.7, backgroundColor: 'black' }}
+                                            />
+                                        )}
+                                    </>
+                                )
+                            })}
+                        </List>
                     </InfoPanel>
                 </Grid>
 

@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { langMenu } from "../../../data/langMenu"
 
 // type
-import { langMenuType } from "./langMenu.type"
+import { langMenuType } from "./type"
 
 const LangMenu: React.FC<langMenuType> = (props) => {
 

@@ -2,7 +2,7 @@ import { HashRouter, Route, Routes } from "react-router-dom"
 import { Suspense } from 'react'
 
 // components
-import Loading from "../components/common/loading/loading"
+import Loading from "../components/common/loading"
 
 // data
 import { routes } from "../data/routes"

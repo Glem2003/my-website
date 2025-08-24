@@ -2,10 +2,10 @@
 import { Box } from '@mui/material';
 
 // style
-import { infoPanel, infoPanelHeader } from './infoPanel.style'
+import { infoPanel, infoPanelHeader } from './style'
 
 // type
-import { infoPanelType } from './infoPanel.type'
+import { infoPanelType } from './type'
 
 const InfoPanel: React.FC<infoPanelType> = (props) => {
 

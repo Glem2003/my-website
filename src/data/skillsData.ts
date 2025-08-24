@@ -16,7 +16,7 @@ export const skillsData = [
         value: 10
     },
     {
-        name: 'CSS/SASS',
+        name: 'CSS/Sass',
         value: 88
     },
     {

@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 
 // components
-import NotFound from '../components/common/notFound/notFound'
+import NotFound from '../components/common/notFound'
 
 // Lazy load
 const Home = lazy(() => import('../pages/home'))

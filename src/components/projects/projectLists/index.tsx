@@ -10,10 +10,10 @@ import {
 import { IoIosMore } from '../../../assets/icon/index'
 
 // type
-import { ProjectListsType } from './projectLists.type';
+import { ProjectListsType } from './type';
 
 // style
-import { listItem, listItemType, listItemTitle, listItemDate, listItemButton } from './projectLists.style'
+import { listItem, listItemType, listItemTitle, listItemDate, listItemButton } from './style'
 
 const ProjectLists: React.FC<ProjectListsType> = (props) => {
 

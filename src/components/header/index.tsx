@@ -6,7 +6,7 @@ import {
     Stack,
     IconButton,
 } from "@mui/material"
-import MenuButton from "../common/menuButton/menuButton"
+import MenuButton from "../common/menuButton"
 import { Link } from "react-router-dom"
 
 // icon
@@ -22,10 +22,10 @@ import {
     headerTitleBtn,
     headerMenu,
     headerMenuBtns
-} from "./header.style"
+} from "./style"
 
 // type
-import { HeaderType } from "./header.type"
+import { HeaderType } from "./type"
 
 // hooks
 import useBreakPoint from "../../hook/useBreakPoint"

@@ -11,13 +11,13 @@ import {
 } from '@mui/material';
 
 // type
-import { projectCardProps } from "./projectCard.type";
+import { projectCardProps } from "./type";
 
 // icon
 import { IoIosMore } from '../../../assets/icon/index'
 
 // style
-import { imageBox, imgStyle, content, title, buttonArea } from './projectCard.style'
+import { imageBox, imgStyle, content, title, buttonArea } from './style'
 
 const ProjectCard: React.FC<projectCardProps> = (props) => {
 

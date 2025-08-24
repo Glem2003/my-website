@@ -6,12 +6,12 @@ import {
     Grid,
     List,
 } from '@mui/material';
-import DefaultPages from '../components/common/defaultPages/defaultPages';
-import SummaryDisplay from '../components/projects/summaryDisplay/summaryDisplay';
-import ProjectCard from '../components/projects/projectCard/projectCard';
-import ProjectContent from '../components/projects/projectContent/projectContent';
-import ProjectLists from '../components/projects/projectLists/projectLists';
-import InfoPanel from '../components/common/infoPanel/infoPanel';
+import DefaultPages from '../components/common/defaultPages';
+import SummaryDisplay from '../components/projects/summaryDisplay';
+import ProjectCard from '../components/projects/projectCard';
+import ProjectContent from '../components/projects/projectContent';
+import ProjectLists from '../components/projects/projectLists';
+import InfoPanel from '../components/common/infoPanel';
 
 // hook
 import { useTranslation } from 'react-i18next';

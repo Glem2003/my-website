@@ -15,7 +15,7 @@ import { lib as libData } from "../../../data/lib"
 import {
     text,
     useLibIcon
-} from './projectContent.style'
+} from './style'
 
 const ProjectContentUse = ({ lib }: { lib: string[] }) => {
 

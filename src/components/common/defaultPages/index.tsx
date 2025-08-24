@@ -5,19 +5,19 @@ import {
     Snackbar,
     IconButton
 } from "@mui/material"
-import Header from "../../header/header"
-import Footer from "../../../components/footer/footer"
-import MainTitle from "../mainTitle/mainTitle"
-import LangMenu from "../langMenu/langMenu"
+import Header from "../../header"
+import Footer from "../../footer"
+import MainTitle from "../mainTitle"
+import LangMenu from "../langMenu"
 
 // data
 import { navItems } from "../../../data/navItems"
 
 // type
-import { DefaultPagesType } from "./defaultPages.type"
+import { DefaultPagesType } from "./type"
 
 // style
-import { pagesStyle, pagesMain } from "./defaultPages.style"
+import { pagesStyle, pagesMain } from "./style"
 
 // hooks
 import { useTranslation } from "react-i18next"
@@ -29,7 +29,7 @@ import { IoMdClose } from '../../../assets/icon/index'
 const DefaultPages: React.FC<DefaultPagesType> = (props) => {
 
     const { t } = useTranslation()
-    const { isOpen, isLang, isLoad, isMessageShow, setMessageShow, handleMenuControl, handleActive } = useLangSettingMenu()
+    const { isOpen, isLang, isLoad, isMessageShow, handleMessageClose, handleMenuControl, handleActive } = useLangSettingMenu()
 
     const {
         children,
@@ -72,9 +72,9 @@ const DefaultPages: React.FC<DefaultPagesType> = (props) => {
                 open={isMessageShow}
                 autoHideDuration={6000}
                 message={t('language_has_changed')}
-                onClose={() => setMessageShow(prev => !prev)}
+                onClose={handleMessageClose}
                 action={
-                    <IconButton onClick={() => setMessageShow(false)}>
+                    <IconButton onClick={handleMessageClose}>
                         <IoMdClose color="white" />
                     </IconButton>
                 }

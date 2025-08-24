@@ -2,10 +2,10 @@
 import { Button } from "@mui/material"
 
 // style
-import { menuButton } from './menuButton.style'
+import { menuButton } from './style'
 
 // type
-import { MenuButtonType } from "./menuButton.type"
+import { MenuButtonType } from "./type"
 
 // hooks
 import useMenuActive from "../../../hook/useMenuActive"

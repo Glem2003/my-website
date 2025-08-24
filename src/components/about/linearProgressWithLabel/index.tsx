@@ -6,10 +6,10 @@ import {
 } from '@mui/material';
 
 // style
-import { linearProgress, valueStyle } from './linearProgressWithLabel.style';
+import { linearProgress, valueStyle } from './style';
 
 // type
-import { LinearProgressWithLabelType } from './linearProgressWithLabel.type';
+import { LinearProgressWithLabelType } from './type';
 
 const LinearProgressWithLabel: React.FC<LinearProgressWithLabelType> = (props) => {
 

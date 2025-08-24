@@ -1,5 +1,5 @@
 // style
-import './loading.sass'
+import './style.sass'
 
 const Loading = () => {
     return (
