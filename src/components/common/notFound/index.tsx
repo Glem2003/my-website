@@ -1,12 +1,16 @@
-// images
-import notFound from '../../../assets/images/404 error.png';
+// components
+import { Box, Typography, Button } from "@mui/material"
+
+// style
+import { main, title, subtitle, btn } from './style'
 
 const NotFound = () => {
-
     return (
-        <>
-            <img src={notFound} alt="404 error" />
-        </>
+        <Box {...main}>
+            <Typography {...title}>404</Typography>
+            <Typography {...subtitle}>Page Not Found</Typography>
+            <Button {...btn}>go home</Button>
+        </Box>
     )
 }
 
