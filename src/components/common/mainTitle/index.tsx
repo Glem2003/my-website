@@ -5,10 +5,10 @@ import {
 } from "@mui/material"
 
 // type
-import { MainTitleProps } from './mainTitle.type';
+import { MainTitleProps } from './type';
 
 // style
-import { header, headerTitle, headerSubtitle } from './mainTitle.style'
+import { header, headerTitle, headerSubtitle } from './style'
 
 // hooks
 import useBreakPoint from "../../../hook/useBreakPoint"

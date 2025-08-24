@@ -1,8 +1,4 @@
 {
-    "hi": "Hi!",
-    "myEnglishName...": "I am a front-end web developer primarily focused on building websites using React. As a beginner, I am dedicated to optimizing user interfaces and user experiences. I possess a solid technical foundation and strive for excellence in every project.",
-    "mySelf": "I'm Glem",
-    "contactMe": "Contact me",
     "home": "home",
     "central_hub": "central hub",
     "projects": "projects",
@@ -14,6 +10,16 @@
     "delivered_insights": "delivered insights",
     "about": "about",
     "raw_information": "raw information",
+    "contact_Information": "Contact Information",
+    "find_me_online": "Find Me Online",
+    "frontend developer": "Frontend Developer",
+    "about_info": "Front-end developer specializing in React and TypeScript, dedicated to building websites that are both functional and user-friendly. I focus on creating seamless user interfaces and experiences while delivering high-quality, maintainable web solutions.",
+    "get_in_touch": "Get in Touch",
+    "technical_skills": "Technical Skills",
+    "experience": "Experience",
+    "present": "Present",
+    "freelance": "Freelance",
+    "developed responsive websites using React and TypeScript": "Developed responsive websites using React and TypeScript",
     "dev": "dev",
     "copyright": "Copyright",
     "version": "version",
@@ -21,5 +27,6 @@
     "date": "Data",
     "use": "Use",
     "features": "Features",
-    "library": "Library"
+    "library": "Library",
+    "language_has_changed": "Language has changed"
 }

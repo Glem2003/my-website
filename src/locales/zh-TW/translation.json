@@ -1,8 +1,4 @@
 {
-    "hi": "嗨！",
-    "myEnglishName...": "我是一名前端網頁開發者，專注於使用 React 建立網站。作為初學者，我致力於優化使用者介面與使用者體驗。我擁有扎實的技術基礎，並力求在每個專案中追求卓越。",
-    "mySelf": "我是 Glem。",
-    "contactMe": "聯絡我",
     "home": "首頁",
     "central_hub": "內容中心",
     "projects": "專案",
@@ -14,6 +10,16 @@
     "delivered_insights": "行動洞察",
     "about": "關於",
     "raw_information": "核心資訊",
+    "contact_Information": "聯絡資訊",
+    "find_me_online": "社群連結",
+    "frontend developer": "前端工程師",
+    "about_info": "前端開發者，專精於 React 與 TypeScript，致力於打造兼具功能性與使用者友善的網站。我專注於建立流暢的使用者介面與體驗，同時提供高品質、易於維護的網頁解決方案。",
+    "get_in_touch": "聯絡我",
+    "technical_skills": "技術技能",
+    "experience": "相關經驗",
+    "freelance": "自由接案者",
+    "developed responsive websites using React and TypeScript": "使用 React 和 TypeScript 開發響應式網站",
+    "present": "至今",
     "dev": "開發人員",
     "copyright": "版權所有",
     "version": "版本",
@@ -21,5 +27,6 @@
     "date": "日期",
     "use": "使用",
     "features": "功能",
-    "library": "套件庫"
+    "library": "套件庫",
+    "language_has_changed": "語言已更換"
 }

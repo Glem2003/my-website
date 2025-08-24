@@ -2,10 +2,10 @@
 import { Box, Typography } from '@mui/material';
 
 // type
-import { SummaryDisplayType } from './summaryDisplay.type';
+import { SummaryDisplayType } from './type';
 
 // style
-import { summaryDisplay, summaryTitle } from './summaryDisplay.style';
+import { summaryDisplay, summaryTitle } from './style';
 
 // hooks
 import useCountUp from '../../../hook/useCountUp';

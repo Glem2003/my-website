@@ -16,7 +16,7 @@ import {
     ListItem,
     ButtonGroup,
 } from "@mui/material"
-import ProjectContentUse from "./ProjectContentUse"
+import ProjectContentUse from "./projectContentUse"
 
 // icon
 import {
@@ -26,7 +26,7 @@ import {
 } from '../../../assets/icon/index'
 
 // type
-import { projectContentType } from './projectContent.type'
+import { projectContentType } from './type'
 
 // style
 import {
@@ -35,7 +35,7 @@ import {
     headerTitle,
     content,
     text,
-} from './projectContent.style'
+} from './style'
 
 const ProjectContent: React.FC<projectContentType> = (props) => {
 

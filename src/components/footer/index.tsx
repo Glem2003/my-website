@@ -12,10 +12,10 @@ import {
     footerContainer,
     footerStack,
     footerText
-} from "./footer.style"
+} from "./style"
 
 // type
-import { FooterType } from "./footer.type"
+import { FooterType } from "./type"
 
 // hooks
 import useBreakPoint from "../../hook/useBreakPoint"

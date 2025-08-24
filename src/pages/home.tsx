@@ -1,6 +1,6 @@
 // component
 //import { Box } from "@mui/material"
-import DefaultPages from "../components/common/defaultPages/defaultPages"
+import DefaultPages from "../components/common/defaultPages"
 
 // hooks
 import { useTranslation } from "react-i18next"
